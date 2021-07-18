@@ -70,9 +70,6 @@ class XRCSRF {
         if(version_compare('7.1', PHP_VERSION) > 0) {
             self::abort(777, 'Please use PHP version >= 7.1');
         }
-        if(!extension_loaded('curl')) {
-            self::abort(777, 'Unable to find cURL extension');
-        }
         if(!extension_loaded('openssl')) {
             self::abort(777, 'Unable to find OpenSSL extension');
         }
